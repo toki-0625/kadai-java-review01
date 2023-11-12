@@ -6,11 +6,11 @@ public class Review01 {
         int taxPrice;               //関数で消費税額の宣言
         taxPrice = tax(productPrice, tax);
         int taxIncludedPrice = productPrice + taxPrice;     //税込金額を商品価格と消費税額の合計から求める
-        System.out.println(productPrice + "円の商品の税込価格は" + taxIncludedPrice + "円(消費税は" + taxPrice + "円です)");
+        System.out.println(productPrice + "円の商品の税込価格は" + taxIncludedPrice + "円(消費税は" + taxPrice + "円)です。");
     }
 
     public static int tax(int productPrice, int tax) {
-        int taxPrice = productPrice / tax / 100;      //消費税額の計算
+        int taxPrice = productPrice * tax / 100;      //消費税額の計算
         return taxPrice;
     }
 
